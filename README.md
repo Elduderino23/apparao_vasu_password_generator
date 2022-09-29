@@ -25,7 +25,18 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var symbols = [" ", "!", "”", "#", "$", "%", "&", "’", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", ",", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\ ", "]", "^", "_", "`", "{", "|", "}", "~",]
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",]
 ```
+After the array was written down, I started with the functions for each array. For example, a simple boolean with an if statement like the example below:
 
+```Javascript
+var askSpecial = false;
+  if (confirm("Do You Want Special Characters!")) {
+    askSpecial = true;
+
+    general.push(symbols);
+
+  }
+  ```
+  the genera(dot)(symbols) adds symbols the general array.
 
 ## Mock-Up
 
