@@ -17,7 +17,7 @@ It also needed to to be able show prompts that determined which of the 4 class o
 
 The plan of attack started with simply creating an array. The reason behind making the array first before creating any functions or alerts is because a password generator needs characters in order to generate a password. It was also the easiest to conceptualize. 
 
-An example for my array is as follows:
+An example of all the array is shown below:
 
 ```Javascript
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -37,7 +37,7 @@ var askSpecial = false;
   }
   ```
   the genera(dot)(symbols) adds symbols the general array pool which includes uppercase, lower case, and numbers. 
-  I then had to add parameter to the array which required creating an another if statement before the functions that pulled from the character arrays in order to limit the character count into a 8-128 character range like the example below:
+  parameter had to be added to the array, which required creating an another if statement in order to limit the character count into a 8-128 character range like the example below:
   
 ```Javascript
 var general = [];
@@ -59,7 +59,7 @@ These else if messages looked like the the following:
 
   }
   ```
-  I ended the function two math.floor(math.random()) to generate the random characters from all the arrays that general pulled. I added the return pw to end the entire function as seen here:
+  The function ended on two math.floor(math.random()) to generate the random characters from all the arrays that general pulled. The return pw to end the entire function as seen here:
 
   ```Javascript
   console.log(general)
@@ -75,7 +75,7 @@ These else if messages looked like the the following:
   return pw;
 }
   ```
-Overall my first part of the code looked like this:
+Overall the first part of the code looked like this:
 
  ```Javascript
  var generateBtn = document.querySelector("#generate");
@@ -153,61 +153,8 @@ function writePassword() {
 
 }
   ```
-  Everything shown above and an event listener make the whole password generator work.
+  Everything shown above and an event listener makes the whole password generator work.
 
-## Mock-Up
-
-The following image shows the web application's appearance and functionality:
-
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-challenge-demo.png)
-
-## Grading Requirements
-
-This challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-  * The challenge should not produce any errors in the console when you inspect it using Chrome DevTools.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+## Result
+The end product is a functioning website that can generate passwords as well as show prompts in that determine choice of characters and a character length the user wants.
+![](2022-09-29-16-07-25.png)
