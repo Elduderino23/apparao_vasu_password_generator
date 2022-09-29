@@ -75,8 +75,65 @@ These else if messages looked like the the following:
   return pw;
 }
   ```
+Overall my first part of the code looked like this:
+
+ ```Javascript
+ var generateBtn = document.querySelector("#generate");
+
+function generatePassword() {
+  var general = [];
+  let passwordLength = prompt("How many character do you want? More than 8 but less than 128.");
+  if (passwordLength == null || passwordLength == "") {
+    alert("Error, follow the instruction");
+    passwordLength = "Denied"
+    return passwordLength;
+
+  } else if (parseInt(passwordLength) < 8) {
+    return passwordLength = "Too small"
+
+  } else if (parseInt(passwordLength) > 128) {
+    return passwordLength = "Too big"
+
+  }
+  var askSpecial = false;
+  if (confirm("Do You Want Special Characters!")) {
+    askSpecial = true;
+
+    general.push(symbols);
+
+  }
+  var askUppercase = false;
+  if (confirm("Do You Want Uppercase Characters")) {
+    askUppercase = true;
+    general.push(upperCase);
+  }
+  var askLowercase = false;
+  if (confirm("Do You Want Lower Characters")) {
+    general.push(lowerCase);
+    askLowercase = true;
+
+  }
+  var askNumerical = false
+  if (confirm("Do You Want Numerical Characters")) {
+    general.push(numbers);
+    askNumerical = true;
 
 
+  }
+  console.log(general)
+  let pw = "";
+  console.log(pw);
+  for (let i = 0; i < passwordLength; i++) {
+    var index = Math.floor(Math.random() * general.length);
+    var index2 = Math.floor(Math.random() * general[index].length);
+    pw = pw + general[index][index2];
+    console.log("this is pw: " + pw);
+  }
+
+  return pw;
+}
+  ```
+The function derived from generatePassword because most of the operation came from that variable.
 
 
 ## Mock-Up
