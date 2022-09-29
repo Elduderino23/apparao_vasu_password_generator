@@ -6,7 +6,7 @@ function generatePassword() {
   let passwordLength = prompt("How many character do you want? More than 8 but less than 128.");
   if (passwordLength == null || passwordLength == "") {
     alert("Error, follow the instruction");
-    passwordLength = "you canceled"
+    passwordLength = "Denied"
     return passwordLength;
 
   } else if (parseInt(passwordLength) < 8) {
