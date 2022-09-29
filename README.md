@@ -59,7 +59,22 @@ These else if messages looked like the the following:
 
   }
   ```
-  
+  I ended the function two math.floor(math.random()) to generate the random characters from all the arrays that general pulled. I added the return pw to end the entire function as seen here:
+
+  ```Javascript
+  console.log(general)
+  let pw = "";
+  console.log(pw);
+  for (let i = 0; i < passwordLength; i++) {
+    var index = Math.floor(Math.random() * general.length);
+    var index2 = Math.floor(Math.random() * general[index].length);
+    pw = pw + general[index][index2];
+    console.log("this is pw: " + pw);
+  }
+
+  return pw;
+}
+  ```
 
 
 
