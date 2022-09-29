@@ -38,15 +38,31 @@ var askSpecial = false;
   ```
   the genera(dot)(symbols) adds symbols the general array pool which includes uppercase, lower case, and numbers. 
   I then had to add parameter to my array do I created an another if statement before the functions that pulled from the character arrays in order to limit the character count into a 8-128 character range like the example below:
-
-  ```Javascript
-  var general = [];
+  
+```Javascript
+var general = [];
   let passwordLength = prompt("How many character do you want? More than 8 but less than 128.");
   if (passwordLength == null || passwordLength == "") {
     alert("Error, follow the instruction");
     passwordLength = "Denied"
     return passwordLength;
-    ```
+  ```
+Failure to follow the instruction would result in an error alert box. Included with the error message were the words "too big" and "too small".
+These else if messages looked like the the following:
+
+```Javascript
+  } else if (parseInt(passwordLength) < 8) {
+    return passwordLength = "Too small"
+
+  } else if (parseInt(passwordLength) > 128) {
+    return passwordLength = "Too big"
+
+  }
+  ```
+  
+
+
+
 
 ## Mock-Up
 
