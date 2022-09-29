@@ -25,7 +25,7 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var symbols = [" ", "!", "”", "#", "$", "%", "&", "’", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", ",", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\ ", "]", "^", "_", "`", "{", "|", "}", "~",]
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",]
 ```
-After the array was written down, I started with the functions for each array. For example, a simple boolean with an if statement like the example below:
+After the array was written down, the plan started with the functions for each array. For example, a simple boolean with an if statement like the example below:
 
 ```Javascript
 var askSpecial = false;
@@ -37,7 +37,7 @@ var askSpecial = false;
   }
   ```
   the genera(dot)(symbols) adds symbols the general array pool which includes uppercase, lower case, and numbers. 
-  I then had to add parameter to my array do I created an another if statement before the functions that pulled from the character arrays in order to limit the character count into a 8-128 character range like the example below:
+  I then had to add parameter to the array which required creating an another if statement before the functions that pulled from the character arrays in order to limit the character count into a 8-128 character range like the example below:
   
 ```Javascript
 var general = [];
@@ -135,6 +135,25 @@ function generatePassword() {
   ```
 The function derived from generatePassword because most of the operation came from that variable.
 
+The last part was surprisingly easy. A let statement within the writePassword suffice.
+An example of the example is shown below:
+
+  
+```Javascript
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+
+  let writtenPassword = alert("Here is your password")
+  if (writtenPassword = password) {
+    return alert(password);
+
+  }
+
+}
+  ```
+  Everything shown above and an event listener make the whole password generator work.
 
 ## Mock-Up
 
